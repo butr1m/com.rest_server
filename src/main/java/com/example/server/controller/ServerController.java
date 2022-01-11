@@ -27,15 +27,13 @@ public class ServerController {
     }
 
     @PostMapping("/employees")
-    public String addNewEmployee(@RequestBody Employee employee) {
+    public void addNewEmployee(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
-        return "New employee added, his id=" + employee.getEmployeeId();
     }
 
     @DeleteMapping("/employees/{id}")
-    public String deleteEmployee(@PathVariable int id) {
+    public void deleteEmployee(@PathVariable int id) {
         employeeService.deleteEmployee(id);
-        return "Employee with id= " + id + " was deleted!";
     }
 
     @PutMapping("/employees")

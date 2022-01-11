@@ -1,7 +1,7 @@
 package com.example.server.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+
 import java.util.Objects;
 
 @Entity
@@ -29,7 +29,7 @@ public class Employee {
     private Gender gender;
 
     @Column(name = "date_of_birth")
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     public Employee() {
     }
@@ -100,11 +100,11 @@ public class Employee {
         this.gender = gender;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 }
